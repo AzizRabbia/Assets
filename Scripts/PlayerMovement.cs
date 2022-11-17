@@ -15,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     { //moving player
         if (Input.GetKey(KeyCode.UpArrow))
         {
@@ -35,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.RightArrow))
         {
             this.transform.Translate(Vector3.right*Time.deltaTime);
-            playerRb.AddForce(transform.right * speed);
+            
         }
 
     }
